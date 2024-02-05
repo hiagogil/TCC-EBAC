@@ -1,0 +1,17 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Instalação das dependências') {
+      steps {
+        echo 'npm install'
+      }
+    }
+
+    stage('Testando o script') {
+      steps {
+        echo 'npm cypress run'
+      }
+    }
+  }
+}
